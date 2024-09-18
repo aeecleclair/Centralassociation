@@ -1,0 +1,76 @@
+- name: Bazar
+  description: On s'amuse !
+  links:
+    - name: Discord
+      icon: discord.png
+      url: https://discord.gg/c2n6G7MURH
+
+    - name: Facebook
+      icon: facebook.svg
+      url: https://www.facebook.com/BazarCentraleLyon
+
+    - name: Commande Souk
+      icon: pizza.png
+      url: https://collecte.io/commande-de-nourriture-pour-le-souk-1912781/fr
+
+- name: BDE
+  links:
+    - name: FB - AQH
+      icon: facebook.svg
+      url: https://www.facebook.com/groups/AQHAQHAQH
+
+    - name: FB - MBP !
+      icon: facebook.svg
+      url: https://www.facebook.com/groups/mamiebonsplans
+
+    - name: Instagram BDE
+      icon: bde.webp
+      url: https://www.instagram.com/bdecentralelyon/
+
+- name: BDL
+  links:
+    - name: FB - BDL
+      icon: "facebook.svg"
+      url: https://www.facebook.com/groups/1524567274449574
+
+- name: BDS
+  links:
+    - name: Instagram BDS
+      icon: bds.webp
+      url: https://www.instagram.com/bds_ecl/
+
+- name: Commuz'
+  links:
+    - name: Commuz'
+      icon: commuz.svg
+      url: https://commuz.fr/
+- name: Forum Perspectives
+  links:
+    - name: Forum Perspectives
+      icon: forum perspectives.png
+      url: https://forum-perspectives.fr/
+
+- name: Pixel
+  links:
+    - name: Piwigo
+      icon: pixels.svg
+      url: https://piwigo.myecl.fr
+
+- name: Planet
+  links:
+    - name: Insta Planet&Co
+      icon: planet.png
+      url: https://www.instagram.com/planetandcoecl/
+
+- name: RAID
+  links:
+    - name: RAID
+      icon: raid.webp
+      url: https://raid.myecl.fr/
+# Template pour l'ajout des liens d'une asso
+#    - name: Nom de l'asso
+#    - links:
+#        - name: Nom du lien
+#          description: Description du lien
+#          icon: lien du ficher image
+#          url: lien externe

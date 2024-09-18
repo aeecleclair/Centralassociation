@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Centralisation</title>
+  <meta name="description" content="Agrégateur de liens pour les étudiants de l'École Centrale de Lyon" />
+
+  <!-- Give access to Google search console -->
+  <meta name="google-site-verification" content="zr0xe6RJrvtDwccOO9guGDEK5dUHHZFdofchU6l2We4" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicons/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+
+  <script defer data-domain="centralassociation.eclair.ec-lyon.fr"
+    src="https://plausible.eclair.ec-lyon.fr/js/script.outbound-links.js"></script>
+</head>
+
+<body>
+  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll">
+    <div id="title-banner" class="snap-start h-screen w-screen">
+      <h1>Titre</h1>
+      <h2>Sous-titre</h2>
+    </div>
+    <ol class="relative border-l border-gray-200 dark:border-gray-700">
+      {% for banner in banners %}
+      <div id="{{ banner.name }}" class="flex snap-start h-screen w-screen justify-start align-center p-5"
+        style="background: red">
+        <div style="background: blue" class="w-1/7 p-2">
+          <p class="text-9xl font-mono font-bold text-white">{{ banner.name }}</p>
+          <p class="text-xl font-mono font-semibold text-white">{{ banner.description }}</p>
+          <div>
+            {% for link in banner.links %}
+            <p>{{ link.name }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </ol>
+  </div>
+</body>
+<script></script>
+
+</html>
