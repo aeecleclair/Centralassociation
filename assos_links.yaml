@@ -1,8 +1,9 @@
 - name: Bazar
+  icon: bazar.png
   description: On s'amuse !
   links:
     - name: Discord
-      icon: discord.png
+      icon: discord.svg
       url: https://discord.gg/c2n6G7MURH
 
     - name: Facebook
@@ -10,10 +11,12 @@
       url: https://www.facebook.com/BazarCentraleLyon
 
     - name: Commande Souk
-      icon: pizza.png
+      icon: pizza.svg
       url: https://collecte.io/commande-de-nourriture-pour-le-souk-1912781/fr
 
 - name: BDE
+  icon: bde.webp
+  description: On ne s'amuse pas.
   links:
     - name: FB - AQH
       icon: facebook.svg
@@ -24,51 +27,68 @@
       url: https://www.facebook.com/groups/mamiebonsplans
 
     - name: Instagram BDE
-      icon: bde.webp
+      icon: instagram.svg
       url: https://www.instagram.com/bdecentralelyon/
 
 - name: BDL
+  icon: 
+  description:
   links:
     - name: FB - BDL
       icon: "facebook.svg"
       url: https://www.facebook.com/groups/1524567274449574
 
 - name: BDS
+  icon: bds.webp
+  description:
   links:
     - name: Instagram BDS
-      icon: bds.webp
+      icon: instagram.svg
       url: https://www.instagram.com/bds_ecl/
 
 - name: Commuz'
+  icon: commuz.svg
+  description:
   links:
     - name: Commuz'
-      icon: commuz.svg
+      icon: website.svg
       url: https://commuz.fr/
+
 - name: Forum Perspectives
+  icon: forum perspectives.png
+  description:
   links:
     - name: Forum Perspectives
-      icon: forum perspectives.png
+      icon: website.svg
       url: https://forum-perspectives.fr/
 
 - name: Pixel
+  icon: pixels.svg
+  description:
   links:
     - name: Piwigo
-      icon: pixels.svg
+      icon: website.svg
       url: https://piwigo.myecl.fr
 
 - name: Planet
+  icon: planet.png
+  description:
   links:
     - name: Insta Planet&Co
-      icon: planet.png
+      icon: instagram.svg
       url: https://www.instagram.com/planetandcoecl/
 
 - name: RAID
+  icon: raid.webp
+  description:
   links:
     - name: RAID
-      icon: raid.webp
+      icon: website.svg
       url: https://raid.myecl.fr/
 # Template pour l'ajout des liens d'une asso
 #    - name: Nom de l'asso
+#      icon: Logo de l'association
+#      description: Description de l'association
 #    - links:
 #        - name: Nom du lien
 #          description: Description du lien
