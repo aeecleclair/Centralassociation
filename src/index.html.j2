@@ -19,29 +19,77 @@
 </head>
 
 <body>
-  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll">
-    <div id="title-banner" class="snap-start h-screen w-screen">
-      <h1>Titre</h1>
-      <h2>Sous-titre</h2>
+  <div id="drawer" aria-expanded="false"
+    class="fixed top-0 left-0 z-40 h-screen p-4 w-80 overflow-y-auto transition-transform -translate-x-full aria-expanded:translate-x-0 ease-in-out duration-500  bg-blue-800">
+    <div class="mt-32 py-4 overflow-y-auto">
+      <ul class="max-w-md space-y-1 text-white list-none list-inside">
+        <li>
+          <a class="section-link" href="#home">Home</a>
+        </li>
+        {% for banner in banners %}
+        <li>
+          <a class="section-link" href="#{{ banner.name }}">{{ banner.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-    <ol class="relative border-l border-gray-200 dark:border-gray-700">
-      {% for banner in banners %}
-      <div id="{{ banner.name }}" class="flex snap-start h-screen w-screen justify-start align-center p-5"
-        style="background: red">
-        <div style="background: blue" class="w-1/7 p-2">
-          <p class="text-9xl font-mono font-bold text-white">{{ banner.name }}</p>
-          <p class="text-xl font-mono font-semibold text-white">{{ banner.description }}</p>
-          <div>
-            {% for link in banner.links %}
-            <p>{{ link.name }}</p>
-            {% endfor %}
-          </div>
+  </div>
+  <div id="drawer-mask" aria-hidden="true"
+    class="fixed top-0 left-0 z-20 h-screen w-full overflow-y-auto flex backdrop-brightness-50 aria-hidden:backdrop-brightness-100 aria-hidden:pointer-events-none transition ease-in-out duration-500">
+  </div>
+  <button onclick="toggleDrawer()" aria-expanded="false" aria-controls="drawer"
+    class="fixed top-5 left-5 bg-green-200 z-50"><svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24">
+      <title>Menu</title>
+      <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+    </svg></button>
+  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll z-0">
+    <section id="home" class="flex snap-start h-screen w-screen justify-center align-center p-10 bg-red-800">
+      <div class="w-full p-2 bg-blue-800 text-center content-center">
+        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Éclair's</span>
+          Centralassociation
+        </h1>
+        <h2 class="text-xl font-mono font-semibold text-white">Super site trop bien !</h2>
+      </div>
+    </section>
+    {% for banner in banners %}
+    <section id="{{ banner.name }}"
+      class="flex snap-start h-screen w-screen justify-start align-center p-10 bg-red-800">
+      <div class="w-full p-2 bg-blue-800">
+        <h1 class="text-9xl font-mono font-bold text-white">{{ banner.name }}</h1>
+        <h3 class="text-xl font-mono font-semibold text-white">{{ banner.description }}</h3>
+        <div class="flex">
+          {% for link in banner.links %}
+          <a href="{{ link.url }}"
+            class="font-medium hover:shadow-lg rounded-lg text-sm p-2.5 text-center inline-flex items-center w-200">
+            <img src="./assets/icons/{{ link.icon }}" />
+          </a>
+          {% endfor %}
         </div>
       </div>
-      {% endfor %}
-    </ol>
+    </section>
+    {% endfor %}
   </div>
 </body>
-<script></script>
+<script>
+  let drawer = document.getElementById("drawer");
+  let drawer_mask = document.getElementById("drawer-mask");
+  let toggleDrawer = () => {
+    if (drawer.ariaExpanded === "true") {
+      drawer.ariaExpanded = "false";
+      drawer_mask.ariaHidden = "true";
+    } else {
+      drawer.ariaExpanded = "true";
+      drawer_mask.ariaHidden = "false";
+    }
+  };
+  let sections_links = document.getElementsByClassName("section-link");
+  drawer_mask.addEventListener("click", () => { toggleDrawer(); console.log("c'est moi"); });
+
+  for (let section_link of sections_links) {
+    section_link.addEventListener("click", toggleDrawer);
+  }
+</script>
 
 </html>
