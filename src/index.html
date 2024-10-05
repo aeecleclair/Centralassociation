@@ -51,8 +51,17 @@
   -->
   <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0">
     
-    <!-- Page titre
-    <section id="home" class="flex relative snap-start h-screen w-screen justify-center align-center p-10 z-20">
+    <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
+      <line id="line_1" class="transition ease-in-out delay-0" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round"/>
+      <line id="line_2" class="transition ease-in-out delay-0" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round"/>
+      <line id="line_3" class="transition ease-in-out delay-0" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round"/>
+      <line id="line_4" class="transition ease-in-out delay-0" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round"/>
+      <line id="line_5" class="transition ease-in-out delay-0" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round"/>
+      <line id="line_6" class="transition ease-in-out delay-0" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Page titre -->
+    <section id="home" class="banners flex relative snap-start h-screen w-screen justify-center align-center p-10 z-20">
       <div class="absolute z-[25] h-5/6 drop-shadow-md">
         <img src="./assets/icons/eclair.svg" class="h-full" />
       </div>
@@ -64,21 +73,10 @@
         <h2 class="text-xl font-mono font-semibold text-gray-700">Super site trop bien !</h2>
       </div>
     </section>
-    -->
-
-    <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
-      <rect id="line_1" class="transition ease-in-out delay-0" fill="blue" x="0" y="100" width="600" height="10" rx="15" transform="rotate(45)"/>
-    </svg>
 
     {% for banner in banners %}
-    <section id="{{ banner.name }}"
-      class="flex relative snap-start h-screen w-screen justify-start align-center p-10 z-10">
-
-      <!--
-      <svg class="absolute z-10">
-        
-      </svg>
-      -->
+    <section id="{{ banner.name }}" data-primary_color="{{banner.color}}"
+      class="banners flex relative snap-start h-screen w-screen justify-start align-center p-10 z-10">
 
       <div class="absolute right-0 w-1/3 top-1/2 -translate-y-1/2 z-0">
         <img src="./assets/icons/{{ banner.icon }}" class="w-full translate-x-1/4 drop-shadow-xl" />
@@ -112,13 +110,10 @@
 </body>
 <script>
 
+  const colors = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('data-primary_color'));
+  console.log(colors);
 
   const content = document.getElementById("content");
-
-  const colors = ["blue", "red", "pink", "green", "yellow", "orange", "purple", "black"];
-  {% for banner in banners %}
-
-
 
   const line_1 = document.getElementById("line_1");  
 
@@ -127,7 +122,14 @@
     var x = content.scrollTop;
     var y = window.innerHeight;
     
-    line_1.style.fill = colors[~~((x+0.5*y)/y)];
+    const color = colors[~~((x+0.5*y)/y)];
+
+    line_1.style.stroke = color;
+    line_2.style.stroke = color;
+    line_3.style.stroke = color;
+    line_4.style.stroke = color;
+    line_5.style.stroke = color;
+    line_6.style.stroke = color;
   });
 
 </script>

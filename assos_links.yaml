@@ -1,5 +1,6 @@
 - name: Bazar
   icon: bazar.png
+  color : rgb(19,134,223)
   description: On s'amuse !
   links:
     - name: Discord
@@ -16,6 +17,7 @@
 
 - name: BDE
   icon: bde.webp
+  color : rgb(57,77,128)
   description: On ne s'amuse pas.
   links:
     - name: FB - AQH
@@ -36,6 +38,7 @@
 
 - name: BDS
   icon: bds.webp
+  color : rgb(0, 0, 0)
   description:
   links:
     - name: Instagram BDS
@@ -44,6 +47,7 @@
 
 - name: Commuz'
   icon: commuz.svg
+  color : rgb(253,28,95)
   description:
   links:
     - name: Commuz'
@@ -52,6 +56,7 @@
 
 - name: Forum Perspectives
   icon: forum perspectives.png
+  color : rgb(0, 0, 0)
   description:
   links:
     - name: Forum Perspectives
@@ -60,6 +65,7 @@
 
 - name: Pixel
   icon: pixels.svg
+  color : rgb(250,194,76)
   description:
   links:
     - name: Piwigo
@@ -68,6 +74,7 @@
 
 - name: Planet
   icon: planet.png
+  color : rgb(7,101,49)
   description:
   links:
     - name: Insta Planet&Co
@@ -76,6 +83,7 @@
 
 - name: RAID
   icon: raid.webp
+  color : rgb(43,163,72)
   description:
   links:
     - name: RAID
