@@ -46,12 +46,12 @@
     
     <!-- Lignes de couleurs -->
     <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
-      <line id="line_1" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line id="line_2" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line id="line_3" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line id="line_4" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line id="line_5" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line id="line_6" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
     </svg>
 
     <!-- Page titre -->
@@ -118,12 +118,10 @@
     
     const color = colors[~~((x+0.5*y)/y)];
 
-    line_1.style.stroke = color;
-    line_2.style.stroke = color;
-    line_3.style.stroke = color;
-    line_4.style.stroke = color;
-    line_5.style.stroke = color;
-    line_6.style.stroke = color;
+    let primary_lines = document.getElementsByClassName('primary-line');
+    for (let line of primary_lines) {
+      line.style.stroke = color; 
+    }
   });
 
   let drawer_mask = document.getElementById("drawer-mask");
