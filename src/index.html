@@ -21,28 +21,30 @@
 
 <body>
 
+  <!-- Drawer button -->
   <button onclick="toggleDrawer()" aria-expanded="false" aria-controls="drawer" class="fixed top-5 left-5 z-50">
     <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
     </svg>
   </button>
 
+  <!-- Drawer -->
+  <div id="drawer" aria-expanded="false" class="bg-white fixed top-0 left-0 z-40 h-screen w-1/6 overflow-y-auto transition-transform -translate-x-full aria-expanded:translate-x-0 ease-in-out pt-16">
+    <ul class="w-full h-full flex flex-col">
+      {% for banner in banners %}
+      <li><a href="#{{banner.name}}" onclick='toggleDrawer()' class="inline-block h-10 pl-2 w-full leading-10 hover:bg-slate-300">{{banner.name}}</a></li>
+      {% endfor %}
+    </ul>
 
-    <div id="drawer" aria-expanded="false" class="bg-white fixed top-0 left-0 z-40 h-screen w-1/6 overflow-y-auto transition-transform -translate-x-full aria-expanded:translate-x-0 ease-in-out pt-16">
-      <ul class="w-full h-full flex flex-col">
-        {% for banner in banners %}
-        <li><a href="#{{banner.name}}" onclick='toggleDrawer()' class="inline-block h-10 pl-2 w-full leading-10 hover:bg-slate-300">{{banner.name}}</a></li>
-        {% endfor %}
-      </ul>
-
-    </div>
-    <div id="drawer-mask" onclick='toggleDrawer()' class="bg-black/75 w-screen h-screen absolute top-0 left-0 z-[35] hidden aria-expanded:block" aria-expanded="false">
-    </div>
+  </div>
+  <div id="drawer-mask" onclick='toggleDrawer()' class="bg-black/75 w-screen h-screen absolute top-0 left-0 z-[35] hidden aria-expanded:block" aria-expanded="false">
+  </div>
 
 
 
   <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0">
     
+    <!-- Lignes de couleurs -->
     <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
       <line id="line_1" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
       <line id="line_2" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
