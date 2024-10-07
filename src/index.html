@@ -42,22 +42,18 @@
     class="fixed top-0 left-0 z-40 h-screen w-full overflow-y-auto flex backdrop-brightness-50 aria-hidden:backdrop-brightness-100 aria-hidden:pointer-events-none transition ease-in-out duration-500">
   </div>
 
-  <button onclick="toggleDrawer()" aria-expanded="false" aria-controls="drawer" class="fixed top-5 left-5 z-50"><svg
-      class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <title>Menu</title>
       <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
     </svg></button>
 
-  -->
   <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0">
     
     <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
-      <line id="line_1" class="transition ease-in-out delay-0" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round"/>
-      <line id="line_2" class="transition ease-in-out delay-0" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round"/>
-      <line id="line_3" class="transition ease-in-out delay-0" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round"/>
-      <line id="line_4" class="transition ease-in-out delay-0" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round"/>
-      <line id="line_5" class="transition ease-in-out delay-0" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round"/>
-      <line id="line_6" class="transition ease-in-out delay-0" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round"/>
+      <line id="line_1" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line id="line_2" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line id="line_3" class="transition ease-in-out delay-0 duration-300" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line id="line_4" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line id="line_5" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line id="line_6" class="transition ease-in-out delay-0 duration-300" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
     </svg>
 
     <!-- Page titre -->
@@ -131,6 +127,15 @@
     line_5.style.stroke = color;
     line_6.style.stroke = color;
   });
+
+  link_information_btn.onclick = function () {
+      link_modal.classList.remove('hidden');
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  close_modal_btn.onclick = function () {
+      link_modal.classList.add('hidden');
+  }
 
 </script>
 
