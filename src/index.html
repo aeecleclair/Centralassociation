@@ -88,7 +88,7 @@
           occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         </h3>
 
-        <div class="flex space-x-10 items-center h-1/4 overflow-x-scroll z-0">
+        <div class="flex space-x-10 items-center h-1/4 overflow-x-scroll z-0 border-4 border-black rounded-3xl bg-black/50 p-4 drop-shadow text-white">
           {% for link in banner.links %}
             <a href="{{ link.url }}" class="flex flex-col items-center h-full">
               <img class="h-5/6 hover:drop-shadow-md" src="./assets/icons/{{ link.icon }}" alt="{{ link.name }}" />
