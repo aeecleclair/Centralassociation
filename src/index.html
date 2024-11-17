@@ -45,35 +45,12 @@
 
 
 
-  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0">
-    
-    <!-- Lignes de couleurs -->
-    <svg class="fixed top-100 left-600 z-0" viewBox="0 0 1000 1000">
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="265" x2="130" y2="370" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="-10" y1="320" x2="160" y2="445" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="15" x1="500" y1="-10" x2="800" y2="210" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="430" y1="-10" x2="610" y2="120" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="100" y1="-10" x2="255" y2="104" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-      <line class="primary-line transition ease-in-out delay-0 duration-300" stroke-width="10" x1="570" y1="330" x2="1500" y2="1000" stroke="black" stroke-linecap="round" stroke-opacity="0.8"/>
-    </svg>
+  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0 bg-white dark:bg-neutral-800">
 
-    <!-- Page titre -->
-    <section id="home" class="banners flex relative snap-start h-screen w-screen justify-center align-center p-10 z-20">
-      <div class="absolute z-[25] h-5/6 drop-shadow-md">
-        <img src="./assets/icons/eclair.svg" class="h-full" />
-      </div>
-      <div class="flex flex-col w-full p-2 text-center justify-center space-y-20 z-30">
-        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r to-orange-600 from-orange-400">Éclair's</span>
-          Centralassociation
-        </h1>
-        <h2 class="text-xl font-mono font-semibold text-gray-700">Super site trop bien !</h2>
-      </div>
-    </section>
 
     {% for banner in banners %}
-    <section id="{{ banner.name }}" data-primary_color="{{banner.color}}"
-      class="banners flex relative snap-start h-screen w-screen justify-start align-center p-10 z-10">
+    <section id="{{banner.name}}" data-primary_color="{{banner.color}}" data-secondary_color="{{banner.secondary_color}}" data-invert="{{banner.invert if 'invert' in banner}}"
+      class="banners flex relative snap-start h-screen w-screen justify-start items-start p-10 z-8 pt-24">
 
       <div class="absolute right-0 w-1/3 top-1/2 -translate-y-1/2 z-0">
         <img src="./assets/icons/{{ banner.icon }}" class="w-full translate-x-1/4 drop-shadow-xl" />
@@ -83,15 +60,7 @@
 
         <h1 class="h-1/4 text-5xl md:text-6xl lg:text-7xl font-mono font-bold text-gray-700 z-0">{{ banner.name }}</h1>
 
-        <h3 class="h-1/2 text-base text-justify overflow-y-hidden font-mono font-semibold text-gray-700 z-0">
-          {{ banner.description }}"Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </h3>
-
-        <div class="flex space-x-10 items-center h-1/4 overflow-x-scroll z-0 border-4 border-black rounded-3xl bg-black/50 p-4 drop-shadow text-white">
+        <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll z-10">
           {% for link in banner.links %}
             <a href="{{ link.url }}" class="flex flex-col items-center h-full">
               <img class="h-5/6 hover:drop-shadow-md" src="./assets/icons/{{ link.icon }}" alt="{{ link.name }}" />
@@ -108,23 +77,16 @@
 <script>
 
   const colors = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('data-primary_color'));
-  console.log(colors);
 
   const content = document.getElementById("content");
-
-  const line_1 = document.getElementById("line_1");  
 
   content.addEventListener("scroll", (event) => {
     
     var x = content.scrollTop;
     var y = window.innerHeight;
-    
+
     const color = colors[~~((x+0.5*y)/y)];
 
-    let primary_lines = document.getElementsByClassName('primary-line');
-    for (let line of primary_lines) {
-      line.style.stroke = color; 
-    }
   });
 
   let drawer_mask = document.getElementById("drawer-mask");
