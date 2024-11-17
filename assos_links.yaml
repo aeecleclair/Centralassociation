@@ -9,6 +9,47 @@
       url : https://centralisation.eclair.ec-lyon.fr/
       icon : website.svg
 
+- name: Baroc
+  icon: baroc.png
+  color : '#87005f'
+  secondary_color: '#1c1c1c'
+  invert: false
+  description: "La meilleure asso pour servir en soirée ! Deviens un vrai barman et concocte tes meilleurs cocktails ou mocktails pour les soirées classes."
+  links:
+    - name: Facebook
+      icon: facebook.svg
+      url: https://www.facebook.com/centralefruit
+
+- name: Centrale Design
+  icon: design.png
+  color : '#e20614'
+  secondary_color: '#ffffff'
+  invert: false
+  description: "A Centrale Design, on s'occupe de créer et imaginer logos, affiches, et tout ce que vous nous demandez ! On designe aussi de A à Z la Plaquette Alpha chaque année, ainsi que le trombinoscope associatif. Viens nous retrouver si tu as envie de développer ta fibre artistique ou créative, ou simplement si ton asso a besoin d'un nouveau logo !"
+  links:
+    - name: Liens
+      icon: website.svg
+      url: https://linktr.ee/design_ecl
+
+- name: Club Ciné
+  icon: cinema.png
+  color : '#000000'
+  secondary_color: '#DF8841'
+  invert: true
+  description: "Tu sors éreinté de prépa et tu as raté les grosses sorties de ces dernières années ? Tu veux revoir tes films préférés ou en découvrir de nouveaux ? Quel dommage que tu n'aies pas de <i class='italic'> home cinema </i> dans ta chambre étudiante...\n Heureusement que le Club Ciné est là pour toi ! Plusieurs projections gratuites par semaine, dans une vraie salle de cinéma de 169 places à 50m de ta chambre. Que tu aies envie de (re)voir des classiques du 7e art, des blockbusters, des dessins animés ou des comédies, viens donc au Club Ciné !"
+  links:
+    - name: Module Cinéma
+      icon: website.svg
+      url: https://myecl.fr/cinema
+
+    - name: Instagram
+      icon: instagram.svg
+      url: https://www.instagram.com/cine_club_ecl
+
+    - name: Facebook
+      icon: facebook.svg
+      url: https://www.facebook.com/CineClubECL
+
 - name: Commuz'
   icon: commuz.svg
   color : '#FE1B5F'
@@ -47,22 +88,6 @@
       url : https://www.deezer.com/en/artist/69115622
       icon : deezer.svg
 
-- name: WEI
-  icon: wei2024.png
-  color: '#FF5C00'
-  secondary_color: '#FF2C2C'
-  invert: false
-  description: "Dès ton arrivée sur le campus nous serons là pour t’accueillir ! Prépare toi à vivre une quinzaine d’intégration de folie ! 🔥🧡 Au programme sport, culture, soirées, rallye dans Lyon et bien d’autres pour découvrir la vie centralienne, les assos et surtout te faire des amis! Et pour être sûr que tu es bien intégré après ces deux semaines de folie tu vas pouvoir participer au meilleur weekend de ta vie, le WEI Centrale Lyon ! 🔥🔥 Alors fait tes bagages pour 2 semaines légendaires, du 3 au 16 septembre ! 🧡 Pour avoir toutes les infos, n’hésite pas à suivre notre compte Instagram"
-
-  links:
-    - name : Site 
-      url : https://wei.myecl.fr
-      icon : website.svg
-
-    - name : Instagram 
-      url : https://www.instagram.com/weicentralelyon/
-      icon : instagram.svg
-      
 - name: Forum Perspectives
   icon: forum perspectives.png
   color : '#000000'
@@ -94,17 +119,6 @@
       icon: website.svg
       url: https://docs.google.com/forms/d/1PWZ9tTreoyY-92a1qFruBU2_em3ggTVy2SyU6kLOr_c/prefill
 
-- name: Baroc
-  icon: baroc.png
-  color : '#87005f'
-  secondary_color: '#1c1c1c'
-  invert: false
-  description: "La meilleure asso pour servir en soirée ! Deviens un vrai barman et concocte tes meilleurs cocktails ou mocktails pour les soirées classes."
-  links:
-    - name: Facebook
-      icon: facebook.svg
-      url: https://www.facebook.com/centralefruit
-
 - name: Studio Rock (StR)
   icon: studiorock.png
   color : '#7F00FF'
@@ -116,35 +130,21 @@
       icon: website.svg
       url: https://campus.ec-lyon.fr/studio-rock-35850.kjsp?RH=1696598345650&ksession=8018e2c4-78e3-48a4-8046-3b821b6fd3c9
 
-- name: Club Ciné
-  icon: cinema.png
-  color : '#000000'
-  secondary_color: '#DF8841'
-  invert: true
-  description: "Tu sors éreinté de prépa et tu as raté les grosses sorties de ces dernières années ? Tu veux revoir tes films préférés ou en découvrir de nouveaux ? Quel dommage que tu n'aies pas de <i class='italic'> home cinema </i> dans ta chambre étudiante...\n Heureusement que le Club Ciné est là pour toi ! Plusieurs projections gratuites par semaine, dans une vraie salle de cinéma de 169 places à 50m de ta chambre. Que tu aies envie de (re)voir des classiques du 7e art, des blockbusters, des dessins animés ou des comédies, viens donc au Club Ciné !"
-  links:
-    - name: Module Cinéma
-      icon: website.svg
-      url: https://myecl.fr/cinema
-
-    - name: Instagram
-      icon: instagram.svg
-      url: https://www.instagram.com/cine_club_ecl
-
-    - name: Facebook
-      icon: facebook.svg
-      url: https://www.facebook.com/CineClubECL
-
-- name: Centrale Design
-  icon: design.png
-  color : '#e20614'
-  secondary_color: '#ffffff'
+- name: WEI
+  icon: wei2024.png
+  color: '#FF5C00'
+  secondary_color: '#FF2C2C'
   invert: false
-  description: "A Centrale Design, on s'occupe de créer et imaginer logos, affiches, et tout ce que vous nous demandez ! On designe aussi de A à Z la Plaquette Alpha chaque année, ainsi que le trombinoscope associatif. Viens nous retrouver si tu as envie de développer ta fibre artistique ou créative, ou simplement si ton asso a besoin d'un nouveau logo !"
+  description: "Dès ton arrivée sur le campus nous serons là pour t’accueillir ! Prépare toi à vivre une quinzaine d’intégration de folie ! 🔥🧡 Au programme sport, culture, soirées, rallye dans Lyon et bien d’autres pour découvrir la vie centralienne, les assos et surtout te faire des amis! Et pour être sûr que tu es bien intégré après ces deux semaines de folie tu vas pouvoir participer au meilleur weekend de ta vie, le WEI Centrale Lyon ! 🔥🔥 Alors fait tes bagages pour 2 semaines légendaires, du 3 au 16 septembre ! 🧡 Pour avoir toutes les infos, n’hésite pas à suivre notre compte Instagram"
+
   links:
-    - name: Liens
-      icon: website.svg
-      url: https://linktr.ee/design_ecl
+    - name : Site 
+      url : https://wei.myecl.fr
+      icon : website.svg
+
+    - name : Instagram 
+      url : https://www.instagram.com/weicentralelyon/
+      icon : instagram.svg
 
 # Template pour l'ajout des liens d'une asso
 #    - name: Nom de l'asso
