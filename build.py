@@ -16,7 +16,7 @@ with open("assos_links.yaml", "r", encoding="utf8") as links_file:
 jinja_env = Environment(
     loader=FileSystemLoader("./src"), autoescape=select_autoescape()
 )
-page_template = jinja_env.get_template("index.html")
+page_template = jinja_env.get_template("index2.html")
 page_render = page_template.render(banners=data)
 
 # Save the new index file
