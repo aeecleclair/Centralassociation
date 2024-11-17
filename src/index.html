@@ -41,7 +41,7 @@
     <h2 class="mt-4 mb-2 text-center text-2xl"> Assos </h2>
     <ul id="assos_list" class="max-h-full flex flex-col overflow-y-scroll ml-2 border-l-4 border-white font-semibold">
       {% for banner in banners %}
-      <li><a href="#{{banner.name}}" onclick='toggleDrawer()' class="pl-2 inline-block h-10 w-full leading-10 text-xl sm:text-base hover:pl-4">{{banner.name}}</a></li>
+      <li><a onclick='toggleDrawer(); goTo("{{banner.name}}")' class="pl-2 inline-block h-10 w-full leading-10 text-xl sm:text-base hover:pl-4 hover:cursor-pointer">{{banner.name}}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -127,7 +127,14 @@
       drawer_mask.ariaExpanded = "true";
       drawer.ariaExpanded = "true";
     }
+
+    
   };
+
+  function goTo(elementId) {
+    content.scrollTop = document.getElementById(elementId).offsetTop;
+    console.log("test"); 
+  }
 
 </script>
 
