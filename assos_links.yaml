@@ -27,8 +27,8 @@
   invert: false
   description: "A Centrale Design, on s'occupe de créer et imaginer logos, affiches, et tout ce que vous nous demandez ! On designe aussi de A à Z la Plaquette Alpha chaque année, ainsi que le trombinoscope associatif. Viens nous retrouver si tu as envie de développer ta fibre artistique ou créative, ou simplement si ton asso a besoin d'un nouveau logo !"
   links:
-    - name: Liens
-      icon: website.svg
+    - name: Linktree
+      icon: linktree.svg
       url: https://linktr.ee/design_ecl
 
 - name: Club Ciné
@@ -39,7 +39,7 @@
   description: "Tu sors éreinté de prépa et tu as raté les grosses sorties de ces dernières années ? Tu veux revoir tes films préférés ou en découvrir de nouveaux ? Quel dommage que tu n'aies pas de <i class='italic'> home cinema </i> dans ta chambre étudiante...\n Heureusement que le Club Ciné est là pour toi ! Plusieurs projections gratuites par semaine, dans une vraie salle de cinéma de 169 places à 50m de ta chambre. Que tu aies envie de (re)voir des classiques du 7e art, des blockbusters, des dessins animés ou des comédies, viens donc au Club Ciné !"
   links:
     - name: Module Cinéma
-      icon: website.svg
+      icon: myecl.svg
       url: https://myecl.fr/cinema
 
     - name: Instagram
@@ -116,7 +116,7 @@
   description: "Le Club Orchestre Em x Centrale est un orchestre symphonique réunissant une quarantaine de musiciens des deux écoles.   Nous nous retrouvons tous les mardis de 18h30 à 20h30 pour préparer un programme constitué de musiques classiques, de film, de variété, etc… Dans une bonne ambiance et avec un chef d’orchestre professionnel, Alain Jacquon, nous donnons deux concerts différents dans l’année : un à Noël et l’autre pour marquer la fin d’année scolaire. De plus, depuis 2022, nous rythmons la cérémonie de remise des diplômes de l’Ecole Centrale de Lyon."
   links:
     - name: Formulaire de Pré-inscription
-      icon: website.svg
+      icon: form.svg
       url: https://docs.google.com/forms/d/1PWZ9tTreoyY-92a1qFruBU2_em3ggTVy2SyU6kLOr_c/prefill
 
 - name: Studio Rock (StR)
