@@ -3,7 +3,7 @@
   color : '#fb7c05'
   secondary_color: '#000000'
   invert: false
-  description: "<span class='text-3xl text-center'> L'agrégateur de lien associatif d'ÉCLAIR <span>"
+  description: "<span class='text-4xl'> L'agrégateur de lien associatif d'ÉCLAIR </span> <br /> <span class='leading-loose'> Imaginé et conçu par <a href='https://github.com/aeecleclair' alt='github éclair' class='underline'>ÉCLAIR</a></span>"
   links:
     - name : Centralisation
       url : https://centralisation.eclair.ec-lyon.fr/
