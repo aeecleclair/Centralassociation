@@ -38,7 +38,7 @@ Pour construire la page il faut exécuter le script Python. Assurez-vous d'avoir
 Pour modifier le style de la page, il vous suffit de modifier les élements de style dans le fichier `src/index.html`, puis de générer la nouvelle feuille de style avec
 
 ```bash
-npm run stylesheet
+npm run dev
 ```
 
 ou 
@@ -46,9 +46,6 @@ ou
 ```bash
 npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify
 ```
-
-Il ne vous reste plus qu'à compiler.
-
 ## Compilation
 
 Avec Poetry :

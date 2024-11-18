@@ -4,7 +4,6 @@
   },
 
   "scripts": {
-    "stylesheet": "npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify && py build.py"
   }
-
 }
