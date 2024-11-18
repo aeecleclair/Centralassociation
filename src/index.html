@@ -56,25 +56,25 @@
     <section id="{{banner.name}}" data-primary_color="{{banner.color}}" data-secondary_color="{{banner.secondary_color}}" data-invert="{{banner.invert if 'invert' in banner}}"
       class="banners flex relative snap-start h-screen w-screen justify-start items-start p-10 z-8 pt-24">
 
-      <div class="absolute -right-1/4 sm:right-0 h-100 sm:w-1/3 top-1/2 -translate-y-[45%] z-0 opacity-50 sm:opacity-100">
+      <div class="absolute -right-1/4 sm:right-0 h-100 sm:w-1/3 top-1/2 -translate-y-[45%] z-0 opacity-50 lg:opacity-100">
         <img src="./assets/icons/{{ banner.icon }}" class="w-full translate-x-1/4 drop-shadow-xl" />
       </div>
 
-      <div class="flex flex-col w-full sm:w-2/3 h-full" >
+      <div class="flex flex-col w-full md:w-4/5 lg:w-2/3 h-full" >
 
-        <h3 class="h-1/3 hidden sm:block grow text-base text-md text-justify overflow-y-hidden font-semibold overflow-y-scroll p-4 text-black dark:text-white ">
+        <h3 class="h-1/3 hidden lg:block grow text-base text-md text-justify overflow-y-hidden font-semibold overflow-y-scroll p-4 text-black dark:text-white ">
           {{ banner.description | safe }}
         </h3> 
 
         <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll justify-items-center z-10">
           {% for link in banner.links %}
-            <div style="background-color: {{banner.color}};" class="flex w-20 h-20 sm:w-full sm:h-auto rounded-lg hover:-translate-y-0.5 hover:drop-shadow-xl">
+            <div style="background-color: {{banner.color}};" class="flex w-20 h-20 md:w-full md:h-auto rounded-lg hover:-translate-y-0.5 hover:drop-shadow-xl">
                 <a class="flex flex-row items-center grow" href="{{link.url}}">
                     <div class="flex items-center justify-center w-20 h-20">
                         <img class="h-14 w-14 {{'invert' if 'invert' in banner and banner['invert']}}"
                             src="assets/svg_icons/{{ link.icon }}" alt="Icône de {{link.name}}" />
                     </div>
-                    <span class="flex-auto hidden sm:block text-center {{'invert' if 'invert' in banner and banner['invert']}}">{{ link.name }}</span>
+                    <span class="flex-auto hidden md:block md:text-sm lg:text-lg text-center {{'invert' if 'invert' in banner and banner['invert']}}">{{ link.name }}</span>
                 </a>
             </div>
           {% endfor %}
