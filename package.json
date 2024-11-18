@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.12"
+  },
+
+  "scripts": {
+    "stylesheet": "npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify"
   }
+
 }

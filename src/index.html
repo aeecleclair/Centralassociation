@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
   <title>Centralisation</title>
   <meta name="description" content="Agrégateur de liens pour les étudiants de l'École Centrale de Lyon" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -17,6 +16,7 @@
   <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="assets/stylesheet.css" />
 
   <script defer data-domain="centralassociation.eclair.ec-lyon.fr"
     src="https://plausible.eclair.ec-lyon.fr/js/script.outbound-links.js"></script>
@@ -68,7 +68,7 @@
 
         <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll justify-items-center z-10">
           {% for link in banner.links %}
-            <div class="flex w-20 h-20 sm:w-full sm:h-auto rounded-lg bg-[{{banner.color}}] hover:-translate-y-0.5 hover:drop-shadow-xl">
+            <div style="background-color: {{banner.color}};" class="flex w-20 h-20 sm:w-full sm:h-auto rounded-lg hover:-translate-y-0.5 hover:drop-shadow-xl">
                 <a class="flex flex-row items-center grow" href="{{link.url}}">
                     <div class="flex items-center justify-center w-20 h-20">
                         <img class="h-14 w-14 {{'invert' if 'invert' in banner and banner['invert']}}"
