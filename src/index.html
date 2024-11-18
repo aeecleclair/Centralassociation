@@ -66,9 +66,9 @@
           {{ banner.description | safe }}
         </h3> 
 
-        <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll z-10">
+        <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll justify-items-center z-10">
           {% for link in banner.links %}
-            <div class="flex w-20 h-20 sm:w-auto sm:h-auto rounded-lg items-center bg-[{{banner.color}}] hover:-translate-y-0.5 hover:drop-shadow-xl">
+            <div class="flex w-20 h-20 sm:w-full sm:h-auto rounded-lg bg-[{{banner.color}}] hover:-translate-y-0.5 hover:drop-shadow-xl">
                 <a class="flex flex-row items-center grow" href="{{link.url}}">
                     <div class="flex items-center justify-center w-20 h-20">
                         <img class="h-14 w-14 {{'invert' if 'invert' in banner and banner['invert']}}"
