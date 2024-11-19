@@ -1,6 +1,6 @@
-# Centralisation
+# Centralassociation
 
-Le site Web Centralassociation sert d’agrégateur de liens pour les Centraliens : sur cette même page sont centralisés les liens vers les réseaux sociaux de chaque association de l'école.
+Le site Web Centralassociation sert d’agrégateur de liens pour les Centraliens : sur cette même page sont centralisés les liens vers les réseaux sociaux et autres sites de chaque association de l'école.
 
 
 ## Le projet
@@ -15,6 +15,7 @@ Pour faire bref :
 - Le script Python `build.py` lit le fichier YAML et construit la page HTML à partir de celui-ci.
 - Le fichier final est enregistré dans le dossier `./dist` aux côtés des feuilles de styles CSS et des images.
 
+Afin de faciliter la gestion l'adaptabilité de la page en fonction des thèmes et des différentes résolutions d'écrans, la feuille de style de la page est générée avec `tailwind`. 
 
 ## Environnement de compilation
 
@@ -33,6 +34,18 @@ cd ./centralassociation
 Modifiez le fichier `assos_links.yaml` à votre guise.
 
 Pour construire la page il faut exécuter le script Python. Assurez-vous d'avoir `Python3.9` où supérieur installé avec la librairie `Jinja2` et `PyYAML`. L'utilisation d'un environnement virtuel avec [Poetry](https://python-poetry.org/) permet d'installer ces éléments.
+
+Pour modifier le style de la page, assurez vous d'avoir installé `tailwind` via `npm`, il vous suffit alors de modifier les élements de style dans le fichier `src/index.html`, puis de générer la nouvelle feuille de style avec
+ 
+```bash
+npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify
+```
+ou
+
+```bash
+npm run dev
+```
+qui s'occupera également de la compilation.
 
 ## Compilation
 

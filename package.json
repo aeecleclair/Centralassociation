@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.12"
+  },
+
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify && py build.py"
   }
 }

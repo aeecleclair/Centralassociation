@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centralisation</title>
+  <meta name="description" content="Agrégateur de liens pour les étudiants de l'École Centrale de Lyon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Give access to Google search console -->
+  <meta name="google-site-verification" content="zr0xe6RJrvtDwccOO9guGDEK5dUHHZFdofchU6l2We4" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicons/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+  <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="assets/stylesheet.css" />
+
+  <script defer data-domain="centralassociation.eclair.ec-lyon.fr"
+    src="https://plausible.eclair.ec-lyon.fr/js/script.outbound-links.js"></script>
+</head>
+
+<body style="font-family: 'Poppins', system-ui;">
+
+  
+  <!-- Drawer button -->
+  <button onclick="toggleDrawer()" aria-expanded="false" aria-controls="drawer" class="fixed top-3 left-3 z-50">
+    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path id="drawer_svg" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+    </svg>
+  </button>
+
+  <header id="header" class="flex fixed top-0 left-0 w-full h-16 bg-[#fb7c05] z-30 transition ease-in-out duration-300 delay-0">
+    <h1 id="header_text" class="leading-[4rem] text-xl font-bold md:text-4xl md:leading-[4rem] w-full text-center transition ease-in-out duration-300 delay-0">Centralassociation</h1>
+  </header>
+
+  <!-- Drawer -->
+  <div id="drawer" aria-expanded="false" class="bg-[#fb7c05] fixed top-0 left-0 z-40 h-screen w-full md:w-1/3 lg:w-1/5 transition-transform -translate-x-full aria-expanded:translate-x-0 ease-in-out">
+    <h2 class="mt-4 mb-2 text-center text-2xl"> Assos </h2>
+    <ul id="assos_list" class="max-h-full flex flex-col overflow-y-scroll ml-2 border-l-4 border-black font-semibold">
+      {% for banner in banners[1:] %}
+      <li><a onclick='toggleDrawer(); goTo("{{banner.name}}")' class="pl-2 inline-block h-10 w-full leading-10 text-xl sm:text-base hover:pl-4 hover:cursor-pointer">{{banner.name}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div id="drawer-mask" onclick='toggleDrawer()' class="bg-black/75 w-screen h-screen absolute top-0 left-0 z-[35] opacity-0 pointer-events-none aria-expanded:opacity-100 aria-expanded:pointer-events-auto transform ease-in-out duration-100" aria-expanded="false">
+  </div>
+
+  <div id="content" class="h-screen w-screen snap-mandatory snap-y overflow-y-scroll overflow-x-hidden z-0 bg-white dark:bg-neutral-800">
+
+
+    {% for banner in banners %}
+    <section id="{{banner.name}}" data-primary_color="{{banner.color}}" data-secondary_color="{{banner.secondary_color}}" data-invert="{{banner.invert if 'invert' in banner}}"
+      class="banners flex relative snap-start h-screen w-screen justify-start items-start p-10 z-8 pt-24">
+
+      <div class="absolute -right-1/4 sm:right-0 h-100 sm:w-1/3 top-1/2 -translate-y-[45%] z-0 opacity-50 lg:opacity-100">
+        <img src="./assets/icons/{{ banner.icon }}" class="w-full translate-x-1/4 drop-shadow-xl" />
+      </div>
+
+      <div class="flex flex-col w-full md:w-4/5 lg:w-2/3 h-full" >
+
+        <h3 class="h-1/3 hidden lg:block grow text-base text-md text-justify overflow-y-hidden font-semibold overflow-y-scroll p-4 text-black dark:text-white ">
+          {{ banner.description | safe }}
+        </h3> 
+
+        <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll justify-items-center z-10">
+          {% for link in banner.links %}
+            <div style="background-color: {{banner.color}};" class="flex w-20 h-20 md:w-full md:h-auto rounded-lg hover:-translate-y-0.5 hover:drop-shadow-xl">
+                <a class="flex flex-row items-center grow" href="{{link.url}}">
+                    <div class="flex items-center justify-center w-20 h-20">
+                        <img class="h-14 w-14 {{'invert' if 'invert' in banner and banner['invert']}}"
+                            src="assets/svg_icons/{{ link.icon }}" alt="Icône de {{link.name}}" />
+                    </div>
+                    <span class="flex-auto hidden md:block md:text-sm lg:text-lg text-center {{'invert' if 'invert' in banner and banner['invert']}}">{{ link.name }}</span>
+                </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </section>
+    {% endfor %}
+  </div>
+</body>
+<script>
+
+  const colors = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('data-primary_color'));
+  const secondary_colors = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('data-secondary_color'));
+  const names = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('id'));
+  const inverts = Array.from(document.getElementsByClassName('banners')).map(b => b.getAttribute('data-invert'));
+
+  const content = document.getElementById("content");
+
+  content.addEventListener("scroll", (event) => {
+    
+    var x = content.scrollTop;
+    var y = window.innerHeight;
+
+    const color = colors[~~((x+0.5*y)/y)];
+    const secondary_color = secondary_colors[~~((x+0.5*y)/y)];
+    const name = names[~~((x+0.5*y)/y)];
+    const invert = inverts[~~((x+0.5*y)/y)]
+
+    document.getElementById('header').style.backgroundColor = color;
+    document.getElementById('drawer').style.backgroundColor = color;
+    document.getElementById('header_text').textContent=name;
+    const bw_color = invert==="True" ? "white" : "black";
+    document.getElementById('drawer').style.color = bw_color;
+    document.getElementById('header_text').style.color = bw_color;
+    document.getElementById('assos_list').style.borderColor = secondary_color ? secondary_color : bw_color;
+    document.getElementById('drawer_svg').setAttribute("fill", secondary_color ? secondary_color : bw_color);
+    
+
+  });
+
+  let drawer_mask = document.getElementById("drawer-mask");
+  let drawer = document.getElementById("drawer");
+
+  let toggleDrawer = () => {
+    if (drawer.ariaExpanded === "true"){
+      drawer_mask.ariaExpanded = "false";
+      drawer.ariaExpanded = "false";
+    } else {
+      drawer_mask.ariaExpanded = "true";
+      drawer.ariaExpanded = "true";
+    }
+
+    
+  };
+
+  function goTo(elementId) {
+    content.scrollTop = document.getElementById(elementId).offsetTop;
+    console.log("test"); 
+  }
+
+</script>
+
+</html>
