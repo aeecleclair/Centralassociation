@@ -35,17 +35,18 @@ Modifiez le fichier `assos_links.yaml` à votre guise.
 
 Pour construire la page il faut exécuter le script Python. Assurez-vous d'avoir `Python3.9` où supérieur installé avec la librairie `Jinja2` et `PyYAML`. L'utilisation d'un environnement virtuel avec [Poetry](https://python-poetry.org/) permet d'installer ces éléments.
 
-Pour modifier le style de la page, il vous suffit de modifier les élements de style dans le fichier `src/index.html`, puis de générer la nouvelle feuille de style avec
+Pour modifier le style de la page, assurez vous d'avoir installé `tailwind` via `npm`, il vous suffit alors de modifier les élements de style dans le fichier `src/index.html`, puis de générer la nouvelle feuille de style avec
+ 
+```bash
+npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify
+```
+ou
 
 ```bash
 npm run dev
 ```
+qui s'occupera également de la compilation.
 
-ou 
-
-```bash
-npx tailwindcss -i ./src/input.css -o ./src/assets/stylesheet.css --minify
-```
 ## Compilation
 
 Avec Poetry :
