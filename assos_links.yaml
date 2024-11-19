@@ -76,6 +76,20 @@
       icon: facebook.svg
       url: https://www.facebook.com/CineClubECL
 
+- name: Club FITE 
+  icon: fite.png
+  color : '#609d5f' 
+  invert: false
+  description: "Le club FITE organise, tous les ans, sur le campus de l'école, aux alentours de début février, le Forum Ingénieur et Transition Écologique qui réunit une quarantaine d'entreprises engagées en faveur de la transition écologique. L'objectif de cet événement est de faire découvrir aux futurs ingénieurs centraliens les différents métiers liés à la transition écologique, ainsi que de permettre aux 2A de trouver des stages dans les différentes entreprises présentes."
+  links:
+    - name: LinkedIn
+      icon: linkedin.svg 
+      url: https://www.linkedin.com/company/forum-ing%C3%A9nieur-transition-ecologique/
+
+    - name: Instagram
+      icon: instagram.svg
+      url: https://www.instagram.com/fite.centrale_lyon/
+
 - name: Commuz'
   icon: commuz.svg
   color : '#FE1B5F'
@@ -113,20 +127,6 @@
     - name : Deezer
       url : https://www.deezer.com/en/artist/69115622
       icon : deezer.svg
-
-- name: club FITE 
-  icon: fite.png
-  color : '#609d5f' 
-  invert: false
-  description: "Le club FITE organise, tous les ans, sur le campus de l'école, aux alentours de début février, le Forum Ingénieur et Transition Écologique qui réunit une quarantaine d'entreprises engagées en faveur de la transition écologique. L'objectif de cet événement est de faire découvrir aux futurs ingénieurs centraliens les différents métiers liés à la transition écologique, ainsi que de permettre aux 2A de trouver des stages dans les différentes entreprises présentes."
-  links:
-    - name: LinkedIn
-      icon: linkedin.svg 
-      url: https://www.linkedin.com/company/forum-ing%C3%A9nieur-transition-ecologique/
-
-    - name: Instagram
-      icon: instagram.svg
-      url: https://www.instagram.com/fite.centrale_lyon/
 
 - name: Forum Perspectives
   icon: forum perspectives.png
