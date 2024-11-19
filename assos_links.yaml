@@ -20,6 +20,32 @@
       icon: facebook.svg
       url: https://www.facebook.com/centralefruit
 
+- name: Bazar
+  icon: bazar.png
+  color : '#1392e7' 
+  secondary_color: '#ffffff'
+  invert: false
+  description: "Le Bazar, c'est l'asso de jeux de société, vidéo et de rôle de Centrale. Retrouvez-nous les vendredi soir pour le Souk, la soirée jeux!"
+  links:
+    - name: Pizza pour le souk
+      icon: pizza.svg
+      url: https://collecte.io/commande-de-nourriture-pour-le-souk-1912781/fr
+
+    - name: Discord
+      icon: discord.svg
+      url: https://discord.gg/JbJa4ShGfr
+
+- name: BDS
+  icon: bds.png
+  color : '#000000' 
+  secondary_color: '#FFFFFF'
+  invert: true
+  description: "Asso sportive de Centrale"
+  links:
+    - name : Instagram
+      icon : instagram.svg
+      url : https://www.instagram.com/bds_ecl?igsh=Zmt2d240bTdzazV3
+
 - name: Centrale Design
   icon: design.png
   color : '#e20614'
@@ -88,6 +114,20 @@
       url : https://www.deezer.com/en/artist/69115622
       icon : deezer.svg
 
+- name: club FITE 
+  icon: fite.png
+  color : '#609d5f' 
+  invert: false
+  description: "Le club FITE organise, tous les ans, sur le campus de l'école, aux alentours de début février, le Forum Ingénieur et Transition Écologique qui réunit une quarantaine d'entreprises engagées en faveur de la transition écologique. L'objectif de cet événement est de faire découvrir aux futurs ingénieurs centraliens les différents métiers liés à la transition écologique, ainsi que de permettre aux 2A de trouver des stages dans les différentes entreprises présentes."
+  links:
+    - name: LinkedIn
+      icon: linkedin.svg 
+      url: https://www.linkedin.com/company/forum-ing%C3%A9nieur-transition-ecologique/
+
+    - name: Instagram
+      icon: instagram.svg
+      url: https://www.instagram.com/fite.centrale_lyon/
+
 - name: Forum Perspectives
   icon: forum perspectives.png
   color : '#000000'
@@ -118,6 +158,25 @@
     - name: Formulaire de Pré-inscription
       icon: form.svg
       url: https://docs.google.com/forms/d/1PWZ9tTreoyY-92a1qFruBU2_em3ggTVy2SyU6kLOr_c/prefill
+
+- name: Piston Hebdo
+  icon: pistonhebdo.png
+  color : '#80c6ce' 
+  secondary_color: '#151515'
+  invert: false
+  description: "Le PH, c’est le meilleur (l’unique) journal de Centrale, et l’une des plus vieilles assos de l’école ! C’est l’acronyme de Piston Hebdo bien que le journal soit mensuel depuis quelques temps… Tous les mois, un numéro haut en couleur avec des recettes, des recommandations culturelles, des jeux et horoscopes est livré dans les boîtes aux lettres des résidences. Le journal est également distribué devant le RU pour les élèves logés hors du campus et est désormais disponible sur MyECL ! En plus de tout ça, le PH est aussi multimédia car on produit également du contenu complémentaire aux articles sur notre super chaîne YouTube. Chaque année un nouveau mandat prend la relève pour façonner ce journal à son goût, qui sait tu en feras peut-être partie !"
+  links:
+    - name: Instagram
+      icon: instagram.svg
+      url: https://www.instagram.com/phecl_/profilecard/?igsh=MWZyMWs3NTA3c2s4dw==
+
+    - name: Youtube
+      icon: youtube.svg
+      url: https://youtube.com/@pistonhebdo3625?si=c7dIEO9_MSIftmtj
+
+    - name: Lecture en ligne
+      icon: myecl.svg
+      url: https://myecl.fr/ph
 
 - name: Studio Rock (StR)
   icon: studiorock.png
