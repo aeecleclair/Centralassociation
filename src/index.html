@@ -93,12 +93,14 @@
   content.addEventListener("scroll", (event) => {
     
     var x = content.scrollTop;
-    var y = window.innerHeight;
+    var y = content.scrollHeight;
+    var count = document.getElementsByClassName("banners").length
+    var index = ~~(x/y * count + 0.5)
 
-    const color = colors[~~((x+0.5*y)/y)];
-    const secondary_color = secondary_colors[~~((x+0.5*y)/y)];
-    const name = names[~~((x+0.5*y)/y)];
-    const invert = inverts[~~((x+0.5*y)/y)]
+    const color = colors[index];
+    const secondary_color = secondary_colors[index];
+    const name = names[index];
+    const invert = inverts[index]
 
     document.getElementById('header').style.backgroundColor = color;
     document.getElementById('drawer').style.backgroundColor = color;
