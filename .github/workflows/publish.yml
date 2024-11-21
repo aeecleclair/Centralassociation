@@ -13,22 +13,27 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v4
 
-      - name: Install poetry
-        uses: abatilo/actions-poetry@v3.0.0
-        with:
-          poetry-version: 1.7.0
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.9"
           cache: "poetry"
 
+      - name: Cache uv folder
+        id: cache-uv
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/uv
+          key: ${{ runner.os }}-python-${{ steps.setup-python.outputs.python-version }}-uv-${{ hashFiles('requirements') }}
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
       - name: Install dependencies
-        run: poetry install
+        run: uv pip install --system -r requirements-dev.txt
 
       - name: Build static files
-        run: poetry run python ./build.py
+        run: python ./build.py
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
