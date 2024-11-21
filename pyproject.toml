@@ -3,7 +3,7 @@ name = "centralassociation"
 version = "0.1.0"
 description = ""
 authors = ["Paul Saubusse <paul.saubusse@etu.ec-lyon.fr>"]
-homepage = "https://centralassociation.eclair.ec-lyon.fr/"
+homepage = "https://assos.myecl.fr/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
