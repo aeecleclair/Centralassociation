@@ -7,7 +7,7 @@
   links:
     - name : Centralisation
       url : https://centralisation.eclair.ec-lyon.fr/
-      icon : website.svg
+      icon : centralisation.svg
 
 - name: Baroc
   icon: baroc.png
