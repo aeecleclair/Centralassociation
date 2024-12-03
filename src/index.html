@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centralassociation</title>
   <meta name="description" content="Agrégateur de liens associatifs pour les étudiants de l'École Centrale de Lyon" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
@@ -58,11 +59,11 @@
 
       <div class="flex flex-col w-full md:w-4/5 lg:w-2/3 h-full" >
 
-        <h3 class="h-1/3 hidden lg:block grow text-base text-md text-justify overflow-y-hidden font-semibold overflow-y-scroll scrollbar-hide p-4 text-black dark:text-white ">
+        <h3 class="h-1/3 hidden md:block grow text-base text-md text-justify overflow-y-hidden font-semibold overflow-y-scroll scrollbar-hide p-4 text-black dark:text-white ">
           {{ banner.description | safe }}
         </h3> 
 
-        <div class="w-full grid grid-cols-3 gap-4 p-4 overflow-y-scroll scrollbar-hide justify-items-center z-10">
+        <div class="w-full grid grid-cols-3 md:grid-cols-2 xl:grid-cols-3 gap-4 p-4 overflow-y-scroll scrollbar-hide justify-items-center z-10">
           {% for link in banner.links %}
             <div style="background-color: {{banner.color}};" class="flex w-20 h-20 md:w-full md:h-auto rounded-lg hover:-translate-y-0.5 hover:drop-shadow-xl">
                 <a class="flex flex-row items-center grow" href="{{link.url}}">
