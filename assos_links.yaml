@@ -178,6 +178,21 @@
       icon: myecl.svg
       url: https://myecl.fr/ph
 
+- name: SDeC
+  icon: sdec.png
+  color : '#588250' 
+  secondary_color: '#000000'
+  invert: false
+  description: "Le Service Des Cours (SDeC) est une imprimerie et papeterie sur le campus ouverte tous les jours, entre midi et deux. Nous proposons une large gamme d'impressions allant du format A5 au A0, sur du papier photo, papier cartonné ou encore des étiquettes. Nous faisons aussi du flocage, impressions sur T-shirts sur des T-shirts que nous fournissons nous même. Et surtout, nous avons le meilleur canapé de l'associatif centralien."
+  links:
+  - name: Facebook
+    icon: facebook.svg
+    url: https://www.facebook.com/SDeC.CentraleLyon
+
+  - name: Page Wiki
+    icon: wiki.svg
+    url: https://wiki.myecl.fr/fr/home/SDeC/SDeC
+
 - name: Studio Rock (StR)
   icon: studiorock.png
   color : '#7F00FF'
