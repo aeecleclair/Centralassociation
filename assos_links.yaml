@@ -3,6 +3,7 @@
   color : '#fb7c05'
   secondary_color: '#000000'
   invert: false
+  invert-on-dark: false
   description: "<span class='text-4xl'> L'agrégateur de lien associatif d'ÉCLAIR </span> <br /> <span class='leading-loose'> Imaginé et conçu par <a href='https://github.com/aeecleclair' alt='github éclair' class='underline'>ÉCLAIR</a></span>"
   links:
     - name : Centralisation
@@ -26,6 +27,7 @@
   color : '#87005f'
   secondary_color: '#1c1c1c'
   invert: false
+  invert-on-dark: false
   description: "La meilleure asso pour servir en soirée ! Deviens un vrai barman et concocte tes meilleurs cocktails ou mocktails pour les soirées classes."
   links:
     - name: Facebook
@@ -37,6 +39,7 @@
   color : '#1392e7' 
   secondary_color: '#ffffff'
   invert: false
+  invert-on-dark: false
   description: "Le Bazar, c'est l'asso de jeux de société, vidéo et de rôle de Centrale. Retrouvez-nous les vendredi soir pour le Souk, la soirée jeux!"
   links:
     - name: Pizza pour le souk
@@ -52,6 +55,7 @@
   color : '#000000' 
   secondary_color: '#FFFFFF'
   invert: true
+  invert-on-dark: false
   description: "Asso sportive de Centrale"
   links:
     - name : Instagram
@@ -63,6 +67,7 @@
   color : '#e20614'
   secondary_color: '#ffffff'
   invert: false
+  invert-on-dark: false
   description: "A Centrale Design, on s'occupe de créer et imaginer logos, affiches, et tout ce que vous nous demandez ! On designe aussi de A à Z la Plaquette Alpha chaque année, ainsi que le trombinoscope associatif. Viens nous retrouver si tu as envie de développer ta fibre artistique ou créative, ou simplement si ton asso a besoin d'un nouveau logo !"
   links:
     - name: Linktree
@@ -74,6 +79,7 @@
   color : '#000000'
   secondary_color: '#DF8841'
   invert: true
+  invert-on-dark: false
   description: "Tu sors éreinté de prépa et tu as raté les grosses sorties de ces dernières années ? Tu veux revoir tes films préférés ou en découvrir de nouveaux ? Quel dommage que tu n'aies pas de <i class='italic'> home cinema </i> dans ta chambre étudiante...\n Heureusement que le Club Ciné est là pour toi ! Plusieurs projections gratuites par semaine, dans une vraie salle de cinéma de 169 places à 50m de ta chambre. Que tu aies envie de (re)voir des classiques du 7e art, des blockbusters, des dessins animés ou des comédies, viens donc au Club Ciné !"
   links:
     - name: Module Cinéma
@@ -92,6 +98,7 @@
   icon: fite.png
   color : '#609d5f' 
   invert: false
+  invert-on-dark: false
   description: "Le club FITE organise, tous les ans, sur le campus de l'école, aux alentours de début février, le Forum Ingénieur et Transition Écologique qui réunit une quarantaine d'entreprises engagées en faveur de la transition écologique. L'objectif de cet événement est de faire découvrir aux futurs ingénieurs centraliens les différents métiers liés à la transition écologique, ainsi que de permettre aux 2A de trouver des stages dans les différentes entreprises présentes."
   links:
     - name: LinkedIn
@@ -107,6 +114,7 @@
   color : '#FE1B5F'
   secondary_color: '#1f1962'
   invert: false
+  invert-on-dark: false
   description: "La Commuz' est une comédie musicale organisée chaque année depuis 20 ans par une équipe de près de 100 étudiants de l'École Centrale de Lyon et de l'EMLyon.
                 La Commuz’ réunit chaque année plus de 1200 spectateurs lors des soirées de spectacle au mois de mars.
                 De l'élaboration du scénario en passant par les chorégraphies, la composition et l'orchestration des musiques, la mise en place de l'éclairage et du son, la création des costumes et des décors…
@@ -144,6 +152,7 @@
   icon: forum perspectives.png
   color : '#000000'
   invert: true
+  invert-on-dark: true
   description: "L'association Forum Perspectives est bien plus qu'une
                 simple association professionnelle : elle incarne un réseau
                 dynamique composé de 14 membres dévoués à l'organisa-
@@ -165,6 +174,7 @@
   color : '#002de5'
   secondary_color: '#cad4ff'
   invert: true
+  invert-on-dark: true
   description: "Le Club Orchestre Em x Centrale est un orchestre symphonique réunissant une quarantaine de musiciens des deux écoles.   Nous nous retrouvons tous les mardis de 18h30 à 20h30 pour préparer un programme constitué de musiques classiques, de film, de variété, etc… Dans une bonne ambiance et avec un chef d’orchestre professionnel, Alain Jacquon, nous donnons deux concerts différents dans l’année : un à Noël et l’autre pour marquer la fin d’année scolaire. De plus, depuis 2022, nous rythmons la cérémonie de remise des diplômes de l’Ecole Centrale de Lyon."
   links:
     - name: Formulaire de Pré-inscription
@@ -176,6 +186,7 @@
   color : '#80c6ce' 
   secondary_color: '#151515'
   invert: false
+  invert-on-dark: false
   description: "Le PH, c’est le meilleur (l’unique) journal de Centrale, et l’une des plus vieilles assos de l’école ! C’est l’acronyme de Piston Hebdo bien que le journal soit mensuel depuis quelques temps… Tous les mois, un numéro haut en couleur avec des recettes, des recommandations culturelles, des jeux et horoscopes est livré dans les boîtes aux lettres des résidences. Le journal est également distribué devant le RU pour les élèves logés hors du campus et est désormais disponible sur MyECL ! En plus de tout ça, le PH est aussi multimédia car on produit également du contenu complémentaire aux articles sur notre super chaîne YouTube. Chaque année un nouveau mandat prend la relève pour façonner ce journal à son goût, qui sait tu en feras peut-être partie !"
   links:
     - name: Instagram
@@ -195,6 +206,7 @@
   color : '#588250' 
   secondary_color: '#000000'
   invert: false
+  invert-on-dark: true
   description: "Le Service Des Cours (SDeC) est une imprimerie et papeterie sur le campus ouverte tous les jours, entre midi et deux. Nous proposons une large gamme d'impressions allant du format A5 au A0, sur du papier photo, papier cartonné ou encore des étiquettes. Nous faisons aussi du flocage, impressions sur T-shirts sur des T-shirts que nous fournissons nous même. Et surtout, nous avons le meilleur canapé de l'associatif centralien."
   links:
   - name: Facebook
@@ -210,6 +222,7 @@
   color : '#7F00FF'
   secondary_color: '#000000'
   invert: false
+  invert-on-dark: false
   description: "Tu as toujours rêvé de faire vibrer les murs avec tes riffs de guitare ? Faire trembler les fondations avec tes lignes de basse ? Charmer tout un bâtiment avec ta voix ? Le Studio Rock (StR) est fait pour toi ! Dans ce local tu trouveras tout ce qu’il te faut pour jammer avec tes potes et créer un groupe qui rentrera dans l’histoire de Centrale ! De la batterie aux guitares et amplis, des micros au piano, et même un ukulélé ou des maracas pour ajouter un peu de fantaisie… Alors si tu as envie de devenir une rockstar et de faire danser tout Lyon, ce club est fait pour toi !"
   links:
     - name: Studio Rock
@@ -221,6 +234,7 @@
   color: '#FF5C00'
   secondary_color: '#FF2C2C'
   invert: false
+  invert-on-dark: false
   description: "Dès ton arrivée sur le campus nous serons là pour t’accueillir ! Prépare toi à vivre une quinzaine d’intégration de folie ! 🔥🧡 Au programme sport, culture, soirées, rallye dans Lyon et bien d’autres pour découvrir la vie centralienne, les assos et surtout te faire des amis! Et pour être sûr que tu es bien intégré après ces deux semaines de folie tu vas pouvoir participer au meilleur weekend de ta vie, le WEI Centrale Lyon ! 🔥🔥 Alors fait tes bagages pour 2 semaines légendaires, du 3 au 16 septembre ! 🧡 Pour avoir toutes les infos, n’hésite pas à suivre notre compte Instagram"
 
   links:
