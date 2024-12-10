@@ -110,7 +110,7 @@
       url: https://www.instagram.com/fite.centrale_lyon/
 
 - name: Commuz'
-  icon: commuz.svg
+  icon: commuz.png
   color : '#FE1B5F'
   secondary_color: '#1f1962'
   invert: false
