@@ -62,20 +62,3 @@ python ./build.py
 ```
 
 Récupérer le résultat dans le dossier `./dist`
-
-## Docker
-[! TODO: Change process]
-Pour faciliter le déploiement, une image docker est fournie. Pour créer l'image : `docker build -t centralisation .` et créer le conteneur `docker run -it -d -p 80:80 centralisation`.
-
-Un fichier `docker-compose.yml` peut être édité :
-
-```yml
-version: "3"
-services:
-  web:
-    image: centralisation
-    container_name: centralisation
-    restart: unless-stopped
-    ports:
-      - "80:80"
-```
