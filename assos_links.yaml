@@ -62,6 +62,22 @@
       icon : instagram.svg
       url : https://www.instagram.com/bds_ecl?igsh=Zmt2d240bTdzazV3
 
+- name: Bureau des Arts
+  icon: bda.png
+  color : '#df9860' 
+  secondary_color: '#f4e1a9'
+  invert: false
+  invert-on-dark: false
+  description: "Le BDA, ou Bureau des Arts, est là pour rendre l'art et la culture accessibles à tous les centraliens de Lyon. Pour cela, on organise des événements à l'échelle de toute l'École comme Centrale's Got Talent, inspiré de la célèbre émission, ou la Semaine des Arts, remplie d'activités artistiques de toutes sortes. On organise également des rencontres entre élèves et artistes, dans le cadre d'ateliers ou de conférences."
+  links:
+  - name: Instagram
+    icon: instagram.svg
+    url: https://www.instagram.com/bdacentralelyon/profilecard/?igsh=MXN4ZjJnZGkycmtw
+
+  - name: Facebook
+    icon: facebook.svg
+    url: https://www.facebook.com/profile.php?id=61557774700750
+      
 - name: Centrale Design
   icon: design.png
   color : '#e20614'
