@@ -22,6 +22,10 @@
       url : https://www.facebook.com/eclair.ecl
       icon : facebook.svg
 
+    - name : Github
+      url : https://github.com/aeecleclair
+      icon : github.svg 
+      
 - name: Baroc
   icon: baroc.png
   color : '#87005f'
