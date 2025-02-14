@@ -54,6 +54,10 @@
       icon: discord.svg
       url: https://discord.gg/JbJa4ShGfr
 
+    - name: Facebook
+      icon: facebook.svg
+      url: https://www.facebook.com/BazarCentraleLyon
+
 - name: BDS
   icon: bds.png
   color : '#000000' 
