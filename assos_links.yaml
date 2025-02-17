@@ -221,6 +221,18 @@
       icon: myecl.svg
       url: https://myecl.fr/ph
 
+- name: RAID 
+  icon: raid.png
+  color : '#2da237' 
+  secondary_color: '#dfd3c3'
+  invert: false
+  invert-on-dark: false
+  description: "Le Raid Centrale Lyon organise chaque année un raid étudiant en montagne pendant un week-end en octobre, où les centraliens et étudiants d'autres écoles ont l'occasion de se dépasser. Au programme : trail, VTT, bike&run, course d'orientation... et toujours un maximum de fun et de moments sportifs inoubliables. Cette course devenue emblématique à Centrale se fait en binôme sur un parcours au choix entre découverte, sportif et expert."
+  links:
+  - name : Site
+    icon : website.svg
+    url : https://raid.myecl.fr/
+
 - name: SDeC
   icon: sdec.png
   color : '#588250' 
