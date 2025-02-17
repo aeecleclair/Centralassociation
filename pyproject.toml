@@ -7,11 +7,11 @@ homepage = "https://assos.myecl.fr/"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Jinja2 = "^3.1.4"
+Jinja2 = "^3.1.5"
 PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
-black = "^24.4.2"
+black = "^25.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
