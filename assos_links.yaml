@@ -67,6 +67,10 @@
       icon: facebook.svg
       url: https://www.facebook.com/BazarCentraleLyon
 
+    - name: Instagram
+      icon: instagram.svg
+      url: https://www.instagram.com/bazarcentralelyon
+
 - name: BDS
   icon: bds.png
   color: "#000000"
